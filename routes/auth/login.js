@@ -4,7 +4,7 @@ const { notAuthorize } = require("../../functions/authFunc");
 const passport = require("passport");
 
 route.get("/", notAuthorize, (req, res) => {
-  res.render("auth/login.ejs", { tabName: "Login S-Meet" });
+  res.render("auth/login.ejs", { tabName: "Login Kloud-Connect" });
 });
 
 route.post(
