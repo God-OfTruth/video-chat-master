@@ -1,12 +1,10 @@
 <div class="container py-5"
     style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <h3 class="text-center mb-3">Register S Meet</h3>
+    <h3 class="text-center mb-3">Register</h3>
     <div class="card" style="width:100%; max-width: 35rem;">
-        <div style="display: flex; justify-content: space-between; align-items: center;" class="card-header">
-            <p class="m-0">Signup Form</p><a href="/login" type="button"
-                class="btn btn-outline-primary btn-sm">Login</a>
+        <div style="display: flex; justify-content: center; align-items: center;" class="card-header">
         </div>
-        <div class="card-body">
+        <div class="card-body" >
             <form action="/signup" method="POST">
                 <% if(locals.messages.success){ %>
                 <div class="alert alert-success" role="alert">
@@ -21,38 +19,46 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <div class="form-floating">
-                            <input type="text" name="name" class="form-control" placeholder="name">
-                            <label>Enter your Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Name">
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
                         <div class="form-floating">
-                            <input type="text" name="username" class="form-control" placeholder="username">
-                            <label>Enter your Username</label>
+                            <input type="text" name="username" class="form-control" placeholder="Username">
                         </div>
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <div class="form-floating">
-                        <input type="email" name="email" class="form-control" placeholder="email">
-                        <label>Enter your Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Email">
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="form-floating">
-                        <input type="password" class="form-control" name="password" placeholder="password">
-                        <label for="floatingPassword">Enter your Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
                 </div>
-                <button style="width: 100%;" type="submit" class="btn btn-primary">Sign Up</button>
+                <button style="width: 100%;" type="submit" class="btn btn-primary">Register</button>
+                <a id="registerBtn" href="/login"  type="button" class="btn btn-outline-primary btn-sm">Already have an Account? Login</a>
             </form>
         </div>
     </div>
 </div>
 
 <style>
-    body {
-        background-color: #F5F5F5;
+    .container{
+        /* border: 1px solid red; */
+        padding-top: 70px;
+    }
+    .card-body{
+        margin: 10px;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+    #registerBtn{
+        margin-top: 10px;
+        width: 100%;
     }
 </style>

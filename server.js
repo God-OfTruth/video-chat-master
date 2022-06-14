@@ -53,6 +53,11 @@ app.post("/join-room", (req, res) => {
 
 // index route
 app.use("/", index);
+// app.use('/', (req, res) => {
+//     res.status(200).json({
+//         message: 'Data'
+//     })
+// })
 
 // user id get
 app.get("/user", async (req, res) => {
@@ -150,5 +155,5 @@ io.on("connection", (socket) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`server started on port ${PORT}`);
+    console.log(`server started on port http://localhost:${PORT}`);
 });
