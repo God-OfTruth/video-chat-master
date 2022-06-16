@@ -1,47 +1,124 @@
-
-<div class="container py-5"
-    style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <h3 class="text-center mb-3">Login</h3>
-    <div class="card" style="width:100%; max-width: 35rem;">
-        <div style="display: flex; justify-content: space-between; align-items: center;" class="card-header">
-            
-        </div>
-        <div class="card-body">
-            <form action="/login" method="POST">
-                <% if(locals.messages.success){ %>
-                <div class="alert alert-success" role="alert">
-                    <%= locals.messages.success %>
-                </div>
-                <% } %>
-                <% if(locals.messages.error){ %>
-                <div class="alert alert-danger" role="alert">
-                    <%= locals.messages.error %>
-                </div>
-                <% } %>
-                <div class="form-floating mb-3">
-                    <input type="text" name="username" class="form-control" placeholder="username">
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" name="password" placeholder="password">
-                </div>
-                <button style="width: 100%;" type="submit" class="btn btn-primary">Login</button>
-                <a href="/signup" type="button" id="loginBtn" style="width: 100%;" class="btn btn-outline-primary btn-sm">Don't Have an Account? Register</a>
-            </form>
-        </div>
+<div class="containerArea">
+  <nav class="header" color="secondary">
+    <div><h5>KloudConnect</h5></div>
+    <img src="../images/logo.png" alt="Logo" />
+    <div class="m-0 px-3">
+      <div>
+        <a class="icon" href="#">
+          <span class="material-icons-outlined"> help_outline </span>
+        </a>
+        <a class="icon" href="#">
+          <span class="material-icons-outlined"> info </span>
+        </a>
+        <a class="icon" href="#">
+          <span class="material-icons-outlined"> settings </span>
+        </a>
+        <a class="icon" href="/logout">
+          <span class="material-icons-outlined"> login </span>
+        </a>
+      </div>
     </div>
+  </nav>
+
+  <div
+    class="container py-5"
+    style="
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    "
+  >
+    <h3 class="text-center mb-3">Login</h3>
+    <div class="card" style="width: 100%; max-width: 35rem">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+        class="card-header"
+      ></div>
+      <div class="card-body">
+        <form action="/login" method="POST">
+          <% if(locals.messages.success){ %>
+          <div class="alert alert-success" role="alert">
+            <%= locals.messages.success %>
+          </div>
+          <% } %> <% if(locals.messages.error){ %>
+          <div class="alert alert-danger" role="alert">
+            <%= locals.messages.error %>
+          </div>
+          <% } %>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              placeholder="username"
+            />
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="password"
+            />
+          </div>
+          <button style="width: 100%" type="submit" class="btn btn-primary">
+            Login
+          </button>
+          <a
+            href="/signup"
+            type="button"
+            id="loginBtn"
+            style="width: 100%"
+            class="btn btn-outline-primary btn-sm"
+            >Don't Have an Account? Register</a
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+  <nav class="footer">
+    <a href="#" style="text-decoration: none">Learn more about</a
+    ><b> Kloud Connect </b>
+  </nav>
 </div>
 
 <style>
-    .container{
-        /* border: 1px solid red; */
-
-        padding-top: 70px;
-    }
-    .card-body{
-        margin: 10px;
-    }
-    #loginBtn{
-        margin-top: 10px;
-    }
-    
+  .containerArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  .container {
+    padding-top: 70px;
+  }
+  .card-body {
+    margin: 10px;
+  }
+  #loginBtn {
+    margin-top: 10px;
+  }
+  .footer {
+    align-self: baseline;
+    background-color: #2799e4;
+  }
+  img {
+    width: 200px;
+  }
+  .header {
+    background-color: #2799e4;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .m-0 {
+    display: flex;
+    gap: 5px;
+  }
 </style>
