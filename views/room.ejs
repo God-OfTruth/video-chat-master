@@ -56,9 +56,9 @@
     </button>
   </div>
   <div class="dialogue-body">
-    <p>Share this meeting link with others you want in the meeting</p>
+    <p>Share this meeting Id with others you want in the meeting</p>
     <div class="share-container">
-      <p class="share-link">meet.google.com/sij-dwa-zjm</p>
+      <p class="share-link">Meeting link</p>
       <button id="copy-button" class="dialogue-button tooltip" tool_tip="copy"
         meeting_link="meet.google.com/sij-dwa-zjm">
         <ion-icon name="copy-outline"></ion-icon>
@@ -132,7 +132,7 @@
   })
   const copyButton = document.querySelector('#copy-button')
   const shareLink = document.querySelector('.share-link')
-  shareLink.innerHTML = window.location.href
+  shareLink.innerHTML = (window.location.href).substring(22);
   copyButton.setAttribute('meeting_link', window.location.href)
   const dialogueCloseButton = document.querySelector('#close-dialogue')
   dialogueCloseButton.addEventListener('click', (e) => {
