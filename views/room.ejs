@@ -133,7 +133,7 @@
   const copyButton = document.querySelector('#copy-button')
   const shareLink = document.querySelector('.share-link')
   shareLink.innerHTML = (window.location.href).substring(22);
-  copyButton.setAttribute('meeting_link', window.location.href)
+  copyButton.setAttribute('meeting_link', (window.location.href).substring(22))
   const dialogueCloseButton = document.querySelector('#close-dialogue')
   dialogueCloseButton.addEventListener('click', (e) => {
     const dialogue = document.querySelector('.dialogue-container')
